@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARCHO</title>
+  <link rel="stylesheet" href="css/contacts.min.css">
+</head>
+
+<body>
+
+  {% include 'app/module/_header/_header.html' %}
+
+  <main class="main">
+
+{% include 'app/module/_top/_top.html' %}
+    {# <section class="top">
+      <div class="top__container" style="background-image: url('images/top-bg.jpg');">
+        <div class="container">
+          <h2 class="top__title title">CONTACT US</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Home</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> #}
+
+    <!-- <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830962086!2d-74.11976348216281!3d40.69766374842546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1674585414743!5m2!1sru!2sru"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+    <section class="map">
+      <div class="container">
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="contact__info">
+            <h3 class="contact__info-title">
+              Feel Free Don’t Hesitate To Contact With Us
+            </h3>
+            <p class="contact__info-text">
+              Lorem ipsum dolor sit amet, consectetur adingn elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+              Quis ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao cumsan lacus vel facilisis.
+            </p>
+            <ul class="contact__info-list">
+              <li class="contact__info-item">
+                <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+              </li>
+              <li class="contact__info-item contact__info-item--location">
+                Ranlon Market 789 Road,<br>
+                Market Street, Newyork
+              </li>
+              <li class="contact__info-item contact__info-item--message">
+                <a class="contact__info-email" href="malto:yourmailaddress@gmail.com">yourmailaddress@gmail.com</a>
+                <a class="contact__info-email" href="malto:companymail@gmail.com">companymail@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form" action="#">
+            <p class="contact__form-title">Contact Form</p>
+            <div class="contact__form-box">
+              <input class="contact__form-input" type="text" placeholder="Your Name">
+              <input class="contact__form-input" type="text" placeholder="Your E-mail Address">
+            </div>
+            <input class="contact__form-input" type="text" placeholder="Subject">
+            <textarea class="contact__form-textarea" placeholder="Message here"></textarea>
+            <button class="contact__form-btn" type="submit">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  {% include 'app/module/_footer/_footer.html' %}
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly" defer></script>
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 40.75568399558518, lng: -73.98724089415647 },
+        zoom: 13,
+        styles:
+          //вставка из snazzyMaps
+          [
+            {
+              "featureType": "all",
+              "elementType": "labels.text",
+              "stylers": [
+                {
+                  "color": "#ad2d57"
+                }
+              ]
+            },
+            {
+              "featureType": "administrative",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "color": "#ad2d57"
+                }
+              ]
+            },
+            {
+              "featureType": "landscape",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "color": "#ffecf0"
+                }
+              ]
+            },
+            {
+              "featureType": "landscape.natural",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "color": "#ffecf0"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "color": "#ffffff"
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "hue": "#ff0000"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "color": "#fedce3"
+                }
+              ]
+            }
+          ]
+      });
+    }
+    window.initMap = initMap;
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
