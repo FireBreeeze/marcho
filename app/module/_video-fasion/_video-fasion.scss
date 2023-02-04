@@ -47,3 +47,20 @@
     @extend %btn;
   }
 }
+
+@media (max-width: 1050px) {
+  .video-fasion {
+    &__inner {
+      display: block;
+    }
+
+    &__popup {
+      min-width: 100%;
+      background-position: center top;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
