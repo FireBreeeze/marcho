@@ -45,12 +45,13 @@ a {
   margin: 0 auto 55px;
 }
 
-.breadcrumbs{
+.breadcrumbs {
   display: inline-flex;
   justify-content: center;
   padding-left: 25px;
   position: relative;
-  &::before{
+
+  &::before {
     content: '';
     position: absolute;
     width: 16px;
@@ -59,18 +60,22 @@ a {
     left: 6px;
     background-image: url('../images/icons/chevron.svg');
     background-repeat: no-repeat;
-    path{
+
+    path {
       fill: #000;
     }
   }
-  &__list{
+
+  &__list {
     display: flex;
   }
-  &__item{
+
+  &__item {
     color: #727272;
     padding-right: 40px;
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       width: 16px;
@@ -80,40 +85,49 @@ a {
       background-image: url('../images/icons/chevron.svg');
       background-repeat: no-repeat;
     }
-    &:last-child{
+
+    &:last-child {
       color: $accent;
       padding-right: 0;
-      &::after{
+
+      &::after {
         display: none;
       }
     }
   }
-  &__link{
+
+  &__link {
     color: inherit;
   }
 }
 
-.header__404-page{
+.header__404-page {
   background-color: $bg;
 }
-.pagination{
+
+.pagination {
   display: flex;
   justify-content: center;
   padding: 30px 0;
-  &__list{
+
+  &__list {
     display: flex;
     padding: 0 35px;
   }
-  &__item{
+
+  &__item {
     padding: 0 15px;
   }
-  &__link--active{
+
+  &__link--active {
     color: $accent;
   }
-  &__arrows{
+
+  &__arrows {
     text-transform: uppercase;
     position: relative;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       background-image: url('../images/icons/chevron.svg');
@@ -122,23 +136,38 @@ a {
       top: 8px;
     }
   }
-  &__prev{
+
+  &__prev {
     padding-left: 15px;
-    &::before{
+
+    &::before {
       transform: rotateY(180deg);
       left: 0;
     }
   }
-  &__next{
+
+  &__next {
     padding-right: 15px;
-    &::before{
+
+    &::before {
       right: 0;
     }
   }
 }
 
+@media (max-width: 620px) {
+  .title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
 
-
+@media (max-width: 375px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 
 
 // .sr-only {
