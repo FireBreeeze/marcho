@@ -64,3 +64,16 @@
     }
   }
 }
+
+@media (max-width: 620px) {
+  .video-fasion{
+    padding: 60px 0;
+    &__popup{
+      height: 270px;
+    }
+    &__subtitle{
+      padding-top: 40px;
+      font-size: 18px;
+    }
+  }
+}
